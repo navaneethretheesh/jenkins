@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+RUN apt update && apt install apache2 -y
+EXPOSE 80
+COPY ./car-repair-html-template /var/www/html
+CMD ["apache2","-D","FOREGROUND"]

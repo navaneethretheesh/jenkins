@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  nginx:
+    image: apacheubu:latest
+    container_name: ng1
+    ports:
+    - "8000:80"
+    volumes:
+    - hhh:/data
+    networks:
+    - net1
+volumes:
+  hhh:
+networks:
+  net1:
+    driver: bridge
