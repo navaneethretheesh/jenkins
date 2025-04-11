@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN apti update && apt install nginx -y
+RUN apt update && apt install nginx -y
 EXPOSE 80
 COPY ./car-repair-html-template /usr/share/nginx/html
 CMD ["nginx","-g","daemon off"]
