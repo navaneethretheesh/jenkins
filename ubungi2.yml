@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginxubu:latest
+    container_name: ng2
+    ports:
+    - "8010:80"
+    volumes:
+    - hhh:/data
+    networks:
+    - net1
+volumes:
+  hhh:
+networks:
+  net1:
+    driver: bridge
+
